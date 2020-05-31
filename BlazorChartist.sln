@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorChartist", "src\Blazo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{F77FE562-B0BB-4366-AF14-775534E0E60F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerSample", "samples\ServerSample\ServerSample.csproj", "{95BE9882-D1AA-4F54-BE11-19CF0ED6EC2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerSample", "samples\ServerSample\ServerSample.csproj", "{95BE9882-D1AA-4F54-BE11-19CF0ED6EC2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAssemblySample", "samples\WebAssemblySample\WebAssemblySample.csproj", "{68116928-5DC9-46E0-8DA0-1F8BC22BE03F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAssemblySample", "samples\WebAssemblySample\WebAssemblySample.csproj", "{68116928-5DC9-46E0-8DA0-1F8BC22BE03F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
