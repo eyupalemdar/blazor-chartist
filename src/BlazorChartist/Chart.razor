@@ -1,11 +1,21 @@
 ﻿<div @ref="elem" class="ct-chart"></div>
 
+@* Pass 'this' instance as a cascading parameter to descendants in tree *@
+<CascadingValue Value="@this">
+    @ChildContent
+</CascadingValue>
+
 @inject IJSRuntime JS
 @code {
     ElementReference elem;
 
+    [Parameter] public RenderFragment ChildContent { get; set; }
     [Parameter] public ChartType Type { get; set; }
     [Parameter] public ChartData Data { get; set; } = new ChartData();
+
+    /// <summary>
+    /// Specifies X-axis (catergory) labels.
+    /// </summary>
     [Parameter] public IEnumerable<string> Labels { get; set; }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -15,10 +25,7 @@
             await JS.InvokeVoidAsync("BlazorChartist.createChart", elem, Type.ToString());
         }
 
-        if (Labels != null)
-        {
-            Data.Labels = Labels;
-        }
+        Data.Labels = Labels;
 
         await JS.InvokeVoidAsync("BlazorChartist.updateChart", elem, Data);
     }
